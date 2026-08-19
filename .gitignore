@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+
+# Raw data (downloadable via scripts)
+data/raw/
+!data/raw/vix.csv
+
+# Large numpy arrays (>50MB, reproducible via scripts/data_prep/)
+data/*_data.npy
+data/*_adj.npy
+
+# Precomputed graph caches (auto-generated on first run)
+data/processed/*_precomputed_graphs.npz
+
+# Trained checkpoints (reproduce via training scripts)
+models/*.pth
+models/checkpoints/
+models/finbert_mrc_custom/model.safetensors
+models/finbert_mrc_custom/training_args.bin
+models/finbert_mrc_custom/checkpoint-*/
+
+# LaTeX build artifacts
+papers/elsarticle/*.aux
+papers/elsarticle/*.bbl
+papers/elsarticle/*.blg
+papers/elsarticle/*.fdb_latexmk
+papers/elsarticle/*.fls
+papers/elsarticle/*.log
+papers/elsarticle/*.out
+papers/elsarticle/*.spl
+papers/elsarticle/*.synctex*
+papers/elsarticle/*-eps-converted-to.pdf
+
+# Kaggle deployment (development only)
+kaggle_deploy/
+kaggle_dataset/
+kaggle_kernel/
+scripts/kaggle_deploy/
+
+# Redundant manuscript copies
+papers/elsarticle/manuscript_clean.tex
+papers/elsarticle/revision_1_materials/response_letter.pdf
+
+# Experiment tracking and IDE
+wandb/
+.agents/
+.claude/
+.pytest_cache/
+.ruff_cache/
+
+# Standalone documentation (consolidated into README.md)
+execution_guide.md
+docs/
+
+# Result PNG previews (EPS files are the authoritative journal figures)
+results/*.png
+
+# Intermediate backtesting outputs (reproducible via run_baseline_backtests.py)
+simulations/backtesting_results/*/drawdown.csv
+simulations/backtesting_results/*/portfolio_values.csv
+simulations/backtesting_results/*/trades.csv
+simulations/backtesting_results/*/weights_history.csv
+simulations/backtesting_results/*.png
+simulations/backtesting_results/sp50_pit2013/*/drawdown.csv
+simulations/backtesting_results/sp50_pit2013/*/portfolio_values.csv
+simulations/backtesting_results/sp50_pit2013/*/trades.csv
+simulations/backtesting_results/sp50_pit2013/*/weights_history.csv
+simulations/backtesting_results/sp50_pit2013/*.png
+
+# Misc development artifacts
+*.bak
+nohup*.log
+skills-lock.json
+scratch/

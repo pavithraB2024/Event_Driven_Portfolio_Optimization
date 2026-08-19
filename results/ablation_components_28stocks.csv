@@ -1,0 +1,7 @@
+config,description,sharpe,roi,mdd
+baseline,Baseline (Plain SAC),0.6156,60.83,-40.25
+iqn_only,NextGen (IQN Only),0.3901,28.26,-40.41
+momask,NextGen + Momentum Masking,0.7091,61.91,-32.56
+iqn_momask,NextGen + IQN + Momentum Masking,0.5946,55.21,-39.05
+attgate,NextGen + Attention Gating,0.4993,40.04,-37.70
+full_stack,Full Stack (All Enabled),0.6704,60.46,-35.71

@@ -1,0 +1,42 @@
+rank,node_idx,node_name,importance,date,portfolio,model
+1,6,CSCO,10.0,2020-03-13,28stocks,trained
+2,9,GE,10.0,2020-03-13,28stocks,trained
+3,15,JNJ,10.0,2020-03-13,28stocks,trained
+4,27,WMT,10.0,2020-03-13,28stocks,trained
+5,33,Sector:Industrial,10.0,2020-03-13,28stocks,trained
+6,0,AAPL,8.72643471,2020-03-13,28stocks,trained
+7,11,HD,5.87891197,2020-03-13,28stocks,trained
+8,30,Sector:Energy,4.82592583,2020-03-13,28stocks,trained
+9,17,KO,1.12347794,2020-03-13,28stocks,trained
+10,32,Sector:Healthcare,0.41389704,2020-03-13,28stocks,trained
+11,13,IBM,0.3478775,2020-03-13,28stocks,trained
+12,1,AMZN,0.0,2020-03-13,28stocks,trained
+13,2,BA,0.0,2020-03-13,28stocks,trained
+14,3,BAC,0.0,2020-03-13,28stocks,trained
+15,4,BP,0.0,2020-03-13,28stocks,trained
+16,5,CAT,0.0,2020-03-13,28stocks,trained
+17,7,CVX,0.0,2020-03-13,28stocks,trained
+18,8,ENB,0.0,2020-03-13,28stocks,trained
+19,10,GILD,0.0,2020-03-13,28stocks,trained
+20,12,HON,0.0,2020-03-13,28stocks,trained
+21,14,INTC,0.0,2020-03-13,28stocks,trained
+22,16,JPM,0.0,2020-03-13,28stocks,trained
+23,18,MFC,0.0,2020-03-13,28stocks,trained
+24,19,MMM,0.0,2020-03-13,28stocks,trained
+25,20,MRK,0.0,2020-03-13,28stocks,trained
+26,21,MSFT,0.0,2020-03-13,28stocks,trained
+27,22,ORCL,0.0,2020-03-13,28stocks,trained
+28,23,PFE,0.0,2020-03-13,28stocks,trained
+29,24,SHEL,0.0,2020-03-13,28stocks,trained
+30,25,TD,0.0,2020-03-13,28stocks,trained
+31,26,VZ,0.0,2020-03-13,28stocks,trained
+32,28,Sector:Comm,0.0,2020-03-13,28stocks,trained
+33,29,Sector:Consumer,0.0,2020-03-13,28stocks,trained
+34,31,Sector:Finance,0.0,2020-03-13,28stocks,trained
+35,34,Sector:Tech,0.0,2020-03-13,28stocks,trained
+36,35,Macro,0.0,2020-03-13,28stocks,trained
+37,36,Ev:Mergers and ,0.0,2020-03-13,28stocks,trained
+38,37,Ev:Earnings Rep,0.0,2020-03-13,28stocks,trained
+39,38,Ev:Stock Moveme,0.0,2020-03-13,28stocks,trained
+40,39,Ev:Legal and Re,0.0,2020-03-13,28stocks,trained
+41,40,Ev:Product Laun,0.0,2020-03-13,28stocks,trained

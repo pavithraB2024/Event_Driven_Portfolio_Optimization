@@ -1,0 +1,27 @@
+=== Training Event-Driven GNN-SAC for 28stocks ===
+Verified Portfolio Assets: 28
+Loaded Base Node Features: (5980, 28, 20)
+Features Normalized & Clipped [-5, 5]. New Stats - Mean: -0.0041, Std: 0.9685
+Initializing Dynamic Graph Builder...
+Graph Builder: Created 7 sector nodes for 28stocks: ['Comm', 'Consumer', 'Energy', 'Finance', 'Healthcare', 'Industrial', 'Tech']
+Temporal Decay: Initialized with decay_rate=0.1 (half-life ~6 trading days)
+Pre-computing Event-Aware Node Features & Dynamic Adjacency...
+Loading cached graphs from /home/pavisudha/Downloads/mohin_repo-20260309T083315Z-3-001/mohin_repo/data/processed/28stocks_precomputed_graphs.npz...
+Fused Features Shape: (5098, 41, 20)
+Dynamic Adjacency Shape: (5098, 41, 41)
+Train: 2752 rows (2002-01-02 00:00:00 to 2012-12-05 00:00:00)
+Val:   289 rows (2012-09-10 00:00:00 to 2013-11-01 00:00:00) [incl. 60-day warmup]
+Split follows Sun et al. (2024) protocol for fair benchmark comparison
+Reward type: log_utility
+Initializing GNNSACAgent on cuda...
+Found existing model at /home/pavisudha/Downloads/mohin_repo-20260309T083315Z-3-001/mohin_repo/models/gnn_sac_event_driven_28stocks.pth. Resuming training...
+Successfully loaded model state.
+[NextGen] Architecture enabled: C1-C7 + IQN distributional critic + regime entropy
+Starting Training with Dynamic Graphs...
+LR Schedule: Linear warmup 5000 steps → Cosine decay to 1.0e-06 over -4000 steps
+  Step 500: Val Sharpe=0.8134, Val ROI=7.92%, LR=8.64e-05
+  ★ New Best Validation Sharpe: 0.8134 → Saved to /home/pavisudha/Downloads/mohin_repo-20260309T083315Z-3-001/mohin_repo/models/gnn_sac_event_driven_28stocks_best.pth
+  Step 1000: Val Sharpe=0.8151, Val ROI=7.94%, LR=8.64e-05
+  ★ New Best Validation Sharpe: 0.8151 → Saved to /home/pavisudha/Downloads/mohin_repo-20260309T083315Z-3-001/mohin_repo/models/gnn_sac_event_driven_28stocks_best.pth
+Model saved to /home/pavisudha/Downloads/mohin_repo-20260309T083315Z-3-001/mohin_repo/models/gnn_sac_event_driven_28stocks.pth
+Check results/gnn_sac_training.png

@@ -1,0 +1,5 @@
+exp_id,description,sharpe,roi,mdd
+EXP-0-MLP,"Standard SAC (MLP, no memory)",0.6897,58.88,-32.89
+EXP-1-VECTOR,"Memory-SAC (LSTM, no graph)",0.6257,53.56,-31.93
+EXP-2-STATIC,GNN-SAC + Static Graph (λ=0),0.7113,69.55,-34.99
+EXP-5-NEXTGEN,GNN-SAC + FinBERT + NextGen,0.9493,112.1,-31.59

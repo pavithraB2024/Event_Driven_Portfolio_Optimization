@@ -1,0 +1,146 @@
+# Survivorship-bias audit log for the sp50_pit2013 universe
+# Source: https://raw.githubusercontent.com/fja05680/sp500/master/S%26P%20500%20Historical%20Components%20%26%20Changes%20(Updated).csv  pit_date=2013-11-01
+#
+# [A] TOP-50 NAMES SINCE REMOVED FROM S&P 500
+#     (in our universe, not in the latest CSV row)
+#     Count: 2 / 50
+ESRX
+CLF
+#
+# [B] PRICE-REUSE-GUARD DROPS
+#     (2013 constituents whose yfinance close > $1500,
+#      suggesting the ticker symbol has been reassigned to a different
+#      security since delisting; excluded from ranking)
+#     Count: 1
+HAR (yf=HAR, close=$6,080.25, volume=897,454)
+#
+# [C] SURVIVORSHIP-ELIMINATED CANDIDATES
+#     (2013 constituents that BOTH failed to fetch from yfinance AND
+#      are no longer in the latest S&P 500 row -- strong indicator of
+#      true delisting/acquisition where price data is no longer hosted.
+#      These are the marquee survivorship examples for the response letter.)
+#     Count: 124
+AABA
+ABC
+ADT
+AGN
+ALTR
+ALXN
+ANTM
+APC
+ARG
+ARNC
+AVP
+BCR
+BEAM
+BHGE
+BLL
+BRCM
+BTUUQ
+CA
+CAM
+CBS
+CCE
+CELG
+CERN
+CFN
+CHK
+CMA
+COG
+COV
+CTL
+CTXS
+CVC
+DFS
+DISCA
+DNB
+DNR
+DO
+DTV
+EMC
+ESV
+ETFC
+FDO
+FLIR
+FRX
+FTR
+GAS
+GPS
+HCBK
+HCP
+HES
+HOT
+HRS
+HSP
+IGT
+IPG
+JCP
+JEC
+JNPR
+JOY
+JWN
+K
+KRFT
+KSU
+LB
+LIFE
+LLL
+LLTC
+LM
+LO
+LSI
+MJN
+MMC
+MON
+MRO
+MWV
+MYL
+NBL
+NE
+NLSN
+NYX
+PBCT
+PCL
+PCP
+PDCO
+PETM
+PKI
+PLL
+POM
+PX
+PXD
+QEP
+RAI
+RDC
+RHT
+RTN
+SCG
+SE
+SEE
+SIAL
+SNI
+SPLS
+SRCL
+STI
+STJ
+SWN
+SWY
+SYMC
+TE
+TEG
+TGNA
+TIF
+TMK
+TSS
+TWC
+UTX
+VAR
+VIAB
+WBA
+WFM
+WIN
+WPX
+WYND
+X
+XL
+XLNX

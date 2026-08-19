@@ -1,0 +1,40 @@
+experiment:
+  name: "NextGen_GNN_SAC_v2"
+  version: "2.0"
+  description: "DSR reward, noise augmentation, hierarchical softmax, PER, cosine LR warmup"
+  use_nextgen: true
+
+data:
+  portfolio_name: "28stocks"
+  train_end: "2012-12-05"
+  val_start: "2013-01-01"
+  val_end: "2013-10-31"
+  benchmark_start: "2013-11-04"
+  benchmark_end: "2014-03-14"
+
+training:
+  max_steps: 150000
+  batch_size: 256
+  learning_rate: 0.00005
+  gamma: 0.995
+  tau: 0.005
+  alpha: 0.02
+  auto_tune_alpha: false
+  window_size: 60
+  early_stopping_patience: 20
+  warmup_steps: 5000
+  lr_min: 0.000001
+  target_update_interval: 2
+
+environment:
+  reward_type: "dsr"
+  noise_augmentation: true
+  noise_std: 0.001
+  random_start_offset: true
+  max_start_offset_pct: 0.1
+  diversification_bonus: 0.001
+
+agent:
+  network_type: "LSTM"
+  hidden_dims: [256, 256]
+  embed_dim: 64

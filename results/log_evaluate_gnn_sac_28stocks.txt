@@ -1,0 +1,52 @@
+=== Starting Evaluation Pipeline (Dataset A: 28stocks) ===
+Loaded 28stocks data: (5098, 56)
+Verified Portfolio Assets: 28
+History file not found: /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/checkpoint_history/history_28stocks.csv
+Using fallback best model: /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/models/gnn_sac_event_driven_28stocks_best.pth
+Selected Best Model: /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/models/gnn_sac_event_driven_28stocks_best.pth
+Using Model Path: /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/models/gnn_sac_event_driven_28stocks_best.pth
+Graph Builder: Created 7 sector nodes for 28stocks: ['Comm', 'Consumer', 'Energy', 'Finance', 'Healthcare', 'Industrial', 'Tech']
+Temporal Decay: Initialized with decay_rate=0.1 (half-life ~6 trading days)
+Computing/Loading Event Features for Dataset A...
+Benchmark Period: 2013-11-04 to 2014-03-14
+Pre-loaded 60 warm-up days (from 2013-08-09 00:00:00 to 2013-11-01 00:00:00)
+Agent will actively trade for 90 days of the benchmark
+Total data fed to environment: 150 rows
+Loaded Macro Context (VIX) for Evaluation: 150 points
+Loading GNN-SAC...
+Instantiating GNNSACAgent with nodes=41, action=28, state=861, use_tgn=False, use_nextgen=True, feature_gate=False, att_gate=True, mom_mask=True, num_sectors=7
+Loading LSTM-SAC...
+LSTM-SAC checkpoint: lstm_sac_28stocks_full_best.pth
+Loading GraphSAGE-PPO (Replication)...
+GraphSAGE-PPO loaded from /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/models/graphsage_ppo_event_driven_28stocks_best.pth
+Running Evaluation Loop for LSTM-SAC...
+Running Evaluation Loop for GraphSAGE-PPO...
+Running Evaluation Loop for GNN-SAC...
+Exported daily evaluation details to /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/gnn_sac_eval_details_28stocks.csv
+Calculating Market Baseline...
+
+======================================================================
+6.2 COMPARATIVE PERFORMANCE ON BENCHMARK (DATASET A)
+Checklist Item 1: The 'Money' Table
+======================================================================
+Model                     | ROI        | Sharpe   | Sortino  | Calmar   | Max DD     | Turnover  
+-----------------------------------------------------------------------------------------------------
+Buy-and-Hold (Market)     | 4.89%      | 1.34     | 2.20     | 2.47     | -5.93%     | 0.0000
+LSTM-SAC                  | 5.79%      | 1.57     | 2.63     | 3.06     | -5.71%     | 0.0123
+DeepPocket (Ref)          | 79.57%     | 3.84     | 0.00     | 0.00     | -43.74%    | 0.0000
+GraphSAGE-PPO (Replicated) | 4.79%      | 1.31     | 2.15     | 2.41     | -5.96%     | 0.0199
+Event-Driven GNN-SAC (Ours) | 8.05%      | 2.11     | 3.59     | 4.40     | -5.60%     | 0.0230
+======================================================================
+
+
+[LaTeX Table Row Suggestion]
+GNN-SAC (Ours) & 8.05\% & 24.86\% & 2.11 & 3.59 & 4.40 & -5.60\% & 0.0230 \\
+----------------------------------------
+
+Saved benchmark wealth curves -> /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/benchmark_wealth_curves_28stocks.csv
+Generating Checklist Item 2: Cumulative Wealth Plot...
+Saved Wealth Plot to /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/Figure_6.2_Wealth_28stocks.png
+Saved Vector EPS to /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/Figure_6.2_Wealth_28stocks.eps
+Generating Figure 4: Training Dynamics & Convergence Analysis...
+Saved Training Dynamics Figure to /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/Figure_4_Training_Dynamics_28stocks.png
+Saved Vector EPS to /home/pavisudha/Implementations/patentImple/Objective2_Event_driven_MemoryAgumentedSAC/mohin_repo_for_github_replication/results/Figure_4_Training_Dynamics_28stocks.eps
